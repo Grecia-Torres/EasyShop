@@ -21,6 +21,7 @@ public class ProductsController
     @Autowired
     public ProductsController(ProductDao productDao)
     {
+
         this.productDao = productDao;
     }
 
@@ -81,7 +82,7 @@ public class ProductsController
     {
         try
         {
-            productDao.create(product);
+            productDao.update(id, product); //changed create to update
         }
         catch(Exception ex)
         {
